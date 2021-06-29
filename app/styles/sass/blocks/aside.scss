@@ -1,0 +1,25 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $dark;
+}
+.aside__decoration {
+  flex: 1 0 0;
+  background-image: url("../images/dist/decoration.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35.4px 59[x]
+}
+.aside__social {
+  flex: 1 0 0;
+}
+.aside__share {
+  width: $size;
+  flex: 0 0 $size;
+  background-color: $accent;
+  background-image: url("../images/dist/share-solid.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 10.5px;
+}

@@ -1,0 +1,5 @@
+.header-content {
+  display: grid;
+  grid-template-columns: $size 1fr;
+  height: calc(100% - #{$size});
+}

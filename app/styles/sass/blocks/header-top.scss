@@ -1,0 +1,98 @@
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $deep;
+  color: rgba(255, 255, 255, 0.5);
+  height: $size;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-top__logo {
+  display: flex;
+  flex: 0 1 190px;
+  justify-content: space-between;
+  align-items: center;
+
+  & span {
+    letter-spacing: 0.5em;
+    font-family: raleway-vh, Arial, sans-serif;
+    @include font-size(13px, 15px, 500);
+    text-transform: uppercase;
+    color: white;
+  }
+}
+
+.header-top__img-wrapper {
+  display: flex;
+  height: $size;
+  width: $size;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 34px;
+    height: 33px;
+  }
+}
+.header-top__decoration {
+  flex: 1 1 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 1px;
+    width: 50px;
+    background-color: white;
+    opacity: $border-opacity;
+  }
+}
+.header-top__contacts {
+  position: relative;
+  flex: 0 0 458px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.4em;
+  white-space: nowrap;
+  @include font-size(10px, 12px, 400);
+  text-transform: uppercase;
+}
+.header-top__tel {
+  & span {
+    color: $accent;
+    font-family: roboto-vh, Arial, sans-serif;
+    font-weight: 500;
+  }
+}
+.header-top__separator {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: white;
+    opacity: $border-opacity;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+}
+.header-top__address {
+  & span {
+    color: $accent;
+    font-family: roboto-vh, Arial, sans-serif;
+    font-weight: 500;
+  }  
+}
+.header-top__menu {
+  width: $size;
+  height: $size;
+  background-color: #3C3C3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
