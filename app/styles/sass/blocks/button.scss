@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent;
+  @include font-size(10px, 1.2, 800);
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 2px;
+  padding-left: 16px;
+  padding-right: 26px;
+  color: white;
+}
