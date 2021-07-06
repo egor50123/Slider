@@ -1,5 +1,6 @@
 .button {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   background-color: $accent;
@@ -10,4 +11,23 @@
   padding-left: 16px;
   padding-right: 26px;
   color: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 0;
+    height: 100%;
+    background-color: $dark;
+    transition: width 0.5s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 100%;
+    }
+  } 
 }
