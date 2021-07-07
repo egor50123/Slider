@@ -1,7 +1,7 @@
 .slider-text {
   position: absolute;
   color: white;
-  z-index: 4;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -11,9 +11,11 @@
 
 .slider-text__slider {
   display: flex;
-  margin-top: 22.2vh;
+  height: 100%;
+  top: calc(50% - #{$size});
+  margin-top: -83px;
   justify-content: flex-end;
-  padding-right: 21%;
+  padding-right: calc(25% - 88px);
   padding-left: 25px;
   text-align: right;
 }

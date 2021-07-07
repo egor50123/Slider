@@ -1,0 +1,14 @@
+.slider-number {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  z-index: 10;
+  color: $deep;
+  @include font-size (100px, 148px, 500);
+  font-family: oswald-vh, Arial, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px #7F7F7F;
+}
+.slider-number__dot {
+  color: $accent;
+}
