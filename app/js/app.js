@@ -86,3 +86,41 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
+
+const CLASS_LIST = {
+  MODAL: 'modal',
+  MODAL_ACTIVE: 'modal--active',
+  MODAL_CONTENT: 'modal__content',
+  TRIGGER_OPEN: 'js-open',
+  TRIGGER_CLOSE: 'js-close'
+}
+
+document.addEventListener('click', (event) => {
+  let close = event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`);
+
+  if(event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
+    event.preventDefault();
+
+    const target = event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`);
+    const modalId = target.getAttribute('href').replace('#', '');
+    const modal = document.getElementById(modalId);
+
+    modal.classList.add(CLASS_LIST.MODAL_ACTIVE);
+
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = paddingValue;
+  }
+
+  if (event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`) ||
+      event.target.classList.contains(CLASS_LIST.MODAL_ACTIVE)) {
+
+      const modal = event.target.closest(`.${CLASS_LIST.MODAL}`)
+      modal.classList.remove(CLASS_LIST.MODAL_ACTIVE);
+
+      document.body.style.overflow = 'auto';
+      document.body.style.paddingRight = 0;
+  }
+})
+
+const paddingValue = window.innerWidth - document.querySelector('body').clientWidth + 'px'
+console.log(paddingValue)
