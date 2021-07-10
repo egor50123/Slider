@@ -9,11 +9,30 @@
   background-image: url("../images/dist/decoration.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 35.4px 59[x]
+  background-size: 35.4px 59px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 .aside__social {
   flex: 1 0 0;
+  padding-top: 25px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 30px;
+    padding-bottom: 22px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 14vh;
+  }  
 }
+
 .aside__share {
   width: $size;
   flex: 0 0 $size;
@@ -22,4 +41,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px 10.5px;
+
+  @include media-breakpoint-down(md) {
+    width: $size-sm;
+    flex: 0 0 $size-sm;
+  }
 }

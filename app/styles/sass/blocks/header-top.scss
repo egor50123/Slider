@@ -6,6 +6,10 @@
   color: rgba(255, 255, 255, 0.5);
   height: $size;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include media-breakpoint-down(md){
+    height: $size-sm;
+  }
 }
 
 .header-top__logo {
@@ -17,9 +21,22 @@
   & span {
     letter-spacing: 0.5em;
     font-family: raleway-vh, Arial, sans-serif;
+
     @include font-size(13px, 15px, 500);
     text-transform: uppercase;
     color: white;
+
+    @include media-breakpoint-down (lg){
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down (lg){
+    flex: 0 1 $size;
+  }
+
+  @include media-breakpoint-down (md){
+    flex: 0 1 $size-sm;
   }
 }
 
@@ -33,6 +50,11 @@
   & img {
     width: 34px;
     height: 33px;
+  }
+
+  @include media-breakpoint-down(sm){
+    height: $size-sm;
+    width: $size-sm;
   }
 }
 .header-top__decoration {
@@ -49,7 +71,12 @@
     background-color: white;
     opacity: $border-opacity;
   }
+
+  @include media-breakpoint-down (lg) {
+    display: none;
+  }
 }
+
 .header-top__contacts {
   position: relative;
   flex: 0 0 458px;
@@ -60,12 +87,22 @@
   white-space: nowrap;
   @include font-size(10px, 12px, 400);
   text-transform: uppercase;
+
+  @include media-breakpoint-down (lg) {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
 }
+
 .header-top__tel {
   & span {
     color: $accent;
     font-family: roboto-vh, Arial, sans-serif;
     font-weight: 500;
+  }
+
+  @include media-breakpoint-down (lg) {
+    padding-right: 20px;
   }
 }
 .header-top__separator {
@@ -79,14 +116,27 @@
     top: 0;
     bottom: 0;
     margin: auto 0;
+
+    @include media-breakpoint-down (md){
+      display: none;
+    }
   }
 }
+
 .header-top__address {
   & span {
     color: $accent;
     font-family: roboto-vh, Arial, sans-serif;
-    font-weight: 500;
-  }  
+    font-weight: 500;  
+  }
+
+  @include media-breakpoint-down (md){
+    display: none;
+  }
+
+  @include media-breakpoint-down (lg) {
+    padding-left: 20px;
+  }
 }
 .header-top__menu {
   width: $size;
@@ -95,4 +145,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include media-breakpoint-down(md){
+    width: $size-sm;
+    height: $size-sm;
+  }
 }

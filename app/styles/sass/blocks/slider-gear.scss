@@ -9,4 +9,8 @@
   background-position: center;
   background-size: cover;
   z-index: 4;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }

@@ -97,6 +97,7 @@ const CLASS_LIST = {
 
 document.addEventListener('click', (event) => {
   let close = event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`);
+  let modalContent = document.querySelector('.modal__content');
 
   if(event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
     event.preventDefault();
@@ -109,6 +110,7 @@ document.addEventListener('click', (event) => {
 
     document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = paddingValue;
+
   }
 
   if (event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`) ||

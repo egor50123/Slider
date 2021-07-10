@@ -8,6 +8,10 @@
   font-family: oswald-vh, Arial, sans-serif;
   color: transparent;
   -webkit-text-stroke: 1px #7F7F7F;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 .slider-number__dot {
   color: $accent;

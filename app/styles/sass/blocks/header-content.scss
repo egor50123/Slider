@@ -2,4 +2,9 @@
   display: grid;
   grid-template-columns: $size 1fr;
   height: calc(100% - #{$size});
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: $size-sm 1fr;
+    height: calc(100% - #{$size-sm});
+  }
 }

@@ -10,6 +10,19 @@
   font-family: oswald-vh, Arial, sans-serif;
   @include font-size (24px, 36px, 500);
 
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    height: $size-sm;
+    top: auto;
+    right: 15px;
+    bottom: 0;
+    padding-left: 10px;
+    @include font-size (18px, 28px, 500);
+  }
 }
 .slider-counter__current {
   color: $accent;

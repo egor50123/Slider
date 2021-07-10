@@ -7,6 +7,14 @@
   left: 0;
   bottom: 0;
   z-index: 5;
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: $size-sm;
+  }
 }
 .slider-share {
   flex: 0 1 auto;
@@ -23,6 +31,11 @@
   height: $size;
   border-right: 1px solid rgba(#fff, $border-opacity);
   transition: background-color .25s ease-out;
+
+  @include media-breakpoint-down(md) {
+    width: $size-sm;
+    height: $size-sm;
+  }
 
   &:last-child {
     border-right: 3px solid $accent;
@@ -81,6 +94,10 @@
       left: -4px;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 .swiper-scrollbar {
   flex: 5 0 0;
@@ -93,6 +110,9 @@
     margin-top: -1px;
   }
 
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 .swiper-navigation {
   display: flex;
@@ -146,5 +166,9 @@
 
   & .swiper-button-prev {
     margin-right: 5px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }
