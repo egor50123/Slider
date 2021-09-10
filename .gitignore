@@ -11,5 +11,4 @@ npm-debug.*
 app/css/*.css
 app/css/*.map
 app/js/app.min.js
-dist/
 Thumbs.db

@@ -7,7 +7,7 @@ const bssi         = require('browsersync-ssi')
 const ssi          = require('ssi')
 const webpack      = require('webpack-stream')
 const sass         = require('gulp-sass')(require('sass'))
-const sassglob     = require('gulp-sass-glob')
+const sassglob     = require('gulp-sass-glob');
 const less         = require('gulp-less')
 const lessglob     = require('gulp-less-glob')
 const styl         = require('gulp-stylus')
@@ -73,7 +73,11 @@ function styles() {
 function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(newer('app/images/dist'))
-		.pipe(imagemin())
+		.pipe(imagemin([
+			imagemin.optipng({optimizationLevel:3}),
+			imagemin.mozjpeg({progressive: true}),
+			imagemin.svgo()
+			]))
 		.pipe(dest('app/images/dist'))
 		.pipe(browserSync.stream())
 }

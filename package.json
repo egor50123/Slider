@@ -32,6 +32,11 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylus": "^2.7.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^7.1.0",
+    "optipng-bin": "^7.0.0",
+    "pngquant-bin": "^6.0.0",
     "sass": "^1.35.1",
     "webpack-stream": "^6.1.2"
   },

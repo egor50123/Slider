@@ -1,5 +1,25 @@
-<!--#set var="title" value="Create Cool Slider" -->
-<!--#include virtual="/parts/header.html" -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Create Cool Slider</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
 
 <header class="header">
 
@@ -103,6 +123,26 @@
   </div>
 </header>
 
-<!--#include virtual="/parts/modal.html" -->
+<div id="modal" class="modal">
+  <form class="modal__form" action="">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2 class="modal__title">Оставить заявку</h2>
+        <span  class="modal__btn-close js-close">&times;</span>
+      </div>
+      <div class="modal__body">
+        <input type="text" class="form-input modal__form-input" placeholder="Ваше имя...">
+        <input type="text" class="form-input modal__form-input" placeholder="Ваш телефон...">
+        <textarea class="form-input form-input--com modal__form-input" name="comment" placeholder="Сообщение..."></textarea>
+      </div>
+      <div class="modal__footer">
+        <button class="button modal__btn-submit"><span>Отправить</span></button>
+      </div>
+    </div>
+  </form>
+</div>
 
-<!--#include virtual="/parts/footer.html" -->
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
